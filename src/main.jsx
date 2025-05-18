@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./styles/theme.js";
 import { GlobalStyle } from "./styles/GlobalStyle.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Este é ESSENCIAL para o menu funcionar!
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
