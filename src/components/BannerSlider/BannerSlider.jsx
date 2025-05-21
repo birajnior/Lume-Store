@@ -18,7 +18,7 @@ export const BannerSlider = () => {
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`Slide ${index + 1}`} />
+            <img src={src} alt={`Slide ${index + 1}`}/>
           </div>
         ))}
       </Slider>

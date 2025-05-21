@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
- export const images = [
-  "imagens/produto1.png",
-  "imagens/produto2.png",
-  "imagens/produto3.png",
+export const images = [
+  "imagens/produto1.svg",
+  "imagens/produto2.svg",
+  "imagens/produto3.svg",
+  "imagens/produto4.svg",
 ];
 
 export const BannerContainer = styled.div`
