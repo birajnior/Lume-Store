@@ -14,7 +14,7 @@ export const BannerSlider = () => {
   };
 
   return (
-    <BannerContainer>
+    <BannerContainer style={{ maxWidth: '1480px' }}>
       <Slider {...settings}>
         {images.map((src, index) => (
           <div key={index}>
