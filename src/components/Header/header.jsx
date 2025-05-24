@@ -28,7 +28,7 @@ function Header() {
           id="navbarSupportedContent"
           style={{ height: "100%" }}
         >
-          <NavLinkWrapper className="navbar-nav me-auto mb-2 mb-lg-0">
+          {/* <NavLinkWrapper className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
                 Home
@@ -49,7 +49,7 @@ function Header() {
                 Promoções
               </a>
             </li>
-          </NavLinkWrapper>
+          </NavLinkWrapper> */}
           <SearchForm className="d-flex" role="search">
             <input
               className="form-control me-2"
