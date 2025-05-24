@@ -2,18 +2,32 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.nav`
   background-color: ${({ theme }) => theme.colors.background};
-  padding: 0.5rem 0;
-  margin-top: 0;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
+  }
+`;
+
+export const HeaderContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  padding: 0 2rem; // isso define a margem lateral externa total
+  gap: 1rem; /* ajuda no respiro geral */
   position: relative;
-  top: 0;
-  z-index: 1000;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 `;
 
 export const Brand = styled.a`
-  font-size: 1.5rem;
+  font-size: ${({ theme }) => theme.spacing.xl};
   font-weight: bold;
   color: ${({ theme }) => theme.colors.primary};
   text-decoration: none;
@@ -23,49 +37,70 @@ export const Brand = styled.a`
   }
 `;
 
-export const NavLinkWrapper = styled.ul`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  list-style-type: none;
-  margin: 10px;
-  padding: 0;
-  height: 100%;
-
-  .nav-link {
-    color: ${({ theme }) => theme.colors.text} !important;
-    font-weight: 500;
-    font-size: ${({ theme }) => theme.spacing.lg};
-
-    &:hover {
-      color: ${({ theme }) => theme.colors.primary} !important;
-    }
-  }
-
-  /* Mobile layout: vertical e alinhado à esquerda */
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: ${({ theme }) => theme.spacing.xs};
-  }
-`;
-
 export const SearchForm = styled.form`
-  display: flex;
-  gap: 0.5rem;
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 0 auto; /* ← centraliza dentro do container */
+  flex-grow: 1; /* ← ocupa espaço sem empurrar os outros */
+  padding: 0 2rem; /* ← respiro lateral */
 
   input {
+    flex: 1;
+    min-width: 0;
     border-radius: ${({ theme }) => theme.borderRadius};
     padding: 0.5rem;
-    borde: 1px solid ${({ theme }) => theme.colors.border};
+    border: 1px solid ${({ theme }) => theme.colors.border};
   }
+
   button {
     border-color: ${({ theme }) => theme.colors.button};
     color: ${({ theme }) => theme.colors.primary};
+    white-space: nowrap;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: ${({ theme }) => theme.colors.buttonHover};
       color: ${({ theme }) => theme.colors.textLight};
     }
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+  }
+`;
+
+export const UserActions = styled.nav`
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-shrink: 0;
+`;
+
+export const ActionLink = styled.a`
+  font-size: ${({ theme }) => theme.spacing.md};
+  color: ${({ theme }) => theme.colors.text};
+  text-decoration: none;
+  white-space: nowrap;
+
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+export const CartLink = styled(ActionLink)`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const CartCount = styled.span`
+  font-size: ${({ theme }) => theme.spacing.sm};
+  background: ${({ theme }) => theme.colors.primary};
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  margin-left: 4px;
 `;
