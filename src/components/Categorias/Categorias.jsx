@@ -9,7 +9,7 @@ export const CategoriasBar = () => {
       {categorias.map((categoria) => (
         <CategoriasLink
           key={categoria}
-          href="#"
+          href="/"
           onClick={() => setCategoriaAtiva(categoria)}
           className={categoriaAtiva === categoria ? "active" : ""}
         >

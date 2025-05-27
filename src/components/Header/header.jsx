@@ -1,3 +1,4 @@
+import { Cart3, GeoAlt } from "react-bootstrap-icons";
 import {
   HeaderWrapper,
   Brand,
@@ -12,7 +13,7 @@ function Header() {
   return (
     <HeaderWrapper className="navbar navbar-expand-md bg-body-tertiary">
       <div className="container-fluid">
-        <Brand className="navbar-brand" href="#">
+        <Brand className="navbar-brand" href="/">
           Lume-Store
         </Brand>
 
@@ -48,10 +49,10 @@ function Header() {
             <ActionLink href="/login">Entrar / Criar conta</ActionLink>
             {/* <ActionLink href="/account" aria-haspopup="true">Minha conta </ActionLink> */}
             <ActionLink href="/rastrear">
-              <i className="bi bi-geo-alt"></i> <span>Rastrear pedido</span>
+              <GeoAlt size={20} color="#035D9D" /> <span>Rastrear pedido</span>
             </ActionLink>
             <CartLink href="/carrinho" aria-label="Ver carrinho com 0 itens">
-              <i className="bi bi-cart3"></i> <CartCount>0</CartCount>
+              <Cart3 size={20} color="#035D9D" /> <CartCount>0</CartCount>
             </CartLink>
           </UserActions>
         </div>

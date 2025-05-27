@@ -1,16 +1,13 @@
-import { BannerSlider } from "./components/BannerSlider/BannerSlider";
-import Header from "./components/Header/header";
-import { CategoriasBar } from "./components/Categorias/Categorias";
-import ProductCard from "./components/Cards/CardDoProdutos";
+import {  Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Product from "./pages/Product";
 
 function App() {
   return (
-    <>
-      <Header />
-      <CategoriasBar />
-      <BannerSlider />
-      <ProductCard />
-    </>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produto/:id" element={<Product />} />
+      </Routes>
   );
 }
 
