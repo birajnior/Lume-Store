@@ -1,7 +1,8 @@
 import ProductInfo from "../components/Product/ProductInfo";
 
 import ProductGallery from "../components/Product/ProductGallery";
-import RatingStars from "../components/Product/RatingStars";
+// import RatingStars from "../components/Product/RatingStars";
+import ProductTabs from "../components/Product/ProductTabs";
 
 function Product() {
   return (
@@ -21,6 +22,8 @@ function Product() {
             <RatingStars rating={4.5} totalReviews={132} />
           </div> */}
         </div>
+
+        <ProductTabs />
       </section>
     </main>
   );

@@ -15,7 +15,7 @@ const RatingWrapper = styled.div`
   }
 `;
 
-const RatingStars = ({ rating = 0, max = 5, totalReviews = 0 }) => {
+const RatingStars = ({ rating = 0, max = 5, totalReviews }) => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 >= 0.5;
   const emptyStars = max - fullStars - (hasHalfStar ? 1 : 0);
@@ -32,7 +32,11 @@ const RatingStars = ({ rating = 0, max = 5, totalReviews = 0 }) => {
         <Star key={`empty-${i}`} style={{ color: "#ccc" }} />
       ))}
 
-      <span>({totalReviews} avaliações)</span>
+      {totalReviews !== undefined && (
+        <span>
+          ({totalReviews} {totalReviews === 1 ? "avaliação" : "avaliações"})
+        </span>
+      )}
     </RatingWrapper>
   );
 };
