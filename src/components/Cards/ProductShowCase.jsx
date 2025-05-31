@@ -8,19 +8,19 @@ import {
   ProductPrice,
   ProductsGrid,
   Title,
-} from "./CardDoProdutos.style";
+} from "./ProductShowCase.style";
 
-import exemplo from "../../assets/products/exemplo.jpg"
+import exemplo from "../../assets/products/exemplo.jpg";
 
 const products = Array.from({ length: 12 }, (_, i) => ({
   id: i + 1,
   name: `Produto ${i + 1}`,
   price: `R$ ${(i + 1) * 10},00`,
   image: exemplo,
-//   image: `https://via.placeholder.com/300x300.png?text=Produto+${i + 1}`,
+  //   image: `https://via.placeholder.com/300x300.png?text=Produto+${i + 1}`,
 }));
 
-export default function ProductCard() {
+function ProductShowCase() {
   return (
     <ContainerPrimary>
       <Title>Produtos em Destaque</Title>
@@ -41,3 +41,5 @@ export default function ProductCard() {
     </ContainerPrimary>
   );
 }
+
+export default ProductShowCase;
