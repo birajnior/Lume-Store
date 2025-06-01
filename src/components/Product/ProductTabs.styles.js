@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const TabsContainer = styled.div`
   margin-top: 3rem;
@@ -18,8 +18,8 @@ export const TabButton = styled.button`
   padding: 0.5rem 1rem;
   font-weight: bold;
   cursor: pointer;
-  color: ${({ active }) => (active ? '#222' : '#777')};
-  border-color: ${({ active }) => (active ? '#222' : 'transparent')};
+  color: ${({ $active }) => ($active ? "#222" : "#777")};
+  border-color: ${({ $active }) => ($active ? "#222" : "transparent")};
   transition: all 0.3s ease;
 
   &:hover {

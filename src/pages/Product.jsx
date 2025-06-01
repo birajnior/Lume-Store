@@ -3,6 +3,7 @@ import ProductInfo from "../components/Product/ProductInfo";
 import ProductGallery from "../components/Product/ProductGallery";
 // import RatingStars from "../components/Product/RatingStars";
 import ProductTabs from "../components/Product/ProductTabs";
+import RelatedProducts from "../components/Product/RelatedProducts";
 
 function Product() {
   return (
@@ -24,6 +25,7 @@ function Product() {
         </div>
 
         <ProductTabs />
+        <RelatedProducts />
       </section>
     </main>
   );

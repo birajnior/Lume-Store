@@ -10,19 +10,19 @@ const ProductTabs = () => {
     <TabsContainer>
       <TabButtons>
         <TabButton
-          active={activeTab === "description"}
+          $active={activeTab === "description"}
           onClick={() => setActiveTab("description")}
         >
           Descrição
         </TabButton>
         <TabButton
-          active={activeTab === "reviews"}
+          $active={activeTab === "reviews"}
           onClick={() => setActiveTab("reviews")}
         >
           Avaliações
         </TabButton>
         <TabButton
-          active={activeTab === "faq"}
+          $active={activeTab === "faq"}
           onClick={() => setActiveTab("faq")}
         >
           Perguntas Frequentes
