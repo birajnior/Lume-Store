@@ -1,7 +1,15 @@
-// src/components/Cards/ProductCard.jsx
-import { ContainerPrimary, ProductsGrid, Title } from "./ProductCard.style";
-import ProductCardItem from "./ProductCardItem";
 import { productImages } from "../../utils/images";
+import {
+  AddToCartButton,
+  Card,
+  ContainerPrimary,
+  ProductImage,
+  ProductInfo,
+  ProductName,
+  ProductPrice,
+  ProductsGrid,
+  Title,
+} from "./ProductCard.style";
 
 const products = [
   {
@@ -18,7 +26,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Vela Lavanda - vaso cerâmica",
+    name: "Vela Lavanda - vaso ceramica",
     price: "R$ 59,90",
     image: productImages.imgRosa,
   },
@@ -42,17 +50,26 @@ const products = [
   },
 ];
 
-function ProductCard() {
+function ProductList() {
   return (
     <ContainerPrimary>
       <Title>Produtos em Destaque</Title>
       <ProductsGrid>
         {products.map((product) => (
-          <ProductCardItem key={product.id} product={product} />
+          <Card key={product.id}>
+            <ProductInfo>
+              <ProductImage src={product.image} alt={product.name} />
+              <ProductName>{product.name}</ProductName>
+              <ProductPrice>{product.price}</ProductPrice>
+              <AddToCartButton>
+                Adicionar ao carrinho <i className="bi bi-cart-check"></i>
+              </AddToCartButton>
+            </ProductInfo>
+          </Card>
         ))}
       </ProductsGrid>
     </ContainerPrimary>
   );
 }
 
-export default ProductCard;
+export default ProductList;

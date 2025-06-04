@@ -1,9 +1,10 @@
+// src/components/Cards/RelatedProductsSection.jsx
 import {
   ProductsGrid,
   RelatedSection,
   SectionTitle,
 } from "./RelatedProductsSection.style";
-import ProductCard from "./ProductCard";
+import ProductCardItem from "./ProductCardItem";
 
 const RelatedProductsSection = ({ products = [] }) => {
   return (
@@ -11,7 +12,7 @@ const RelatedProductsSection = ({ products = [] }) => {
       <SectionTitle>Produtos Relacionados</SectionTitle>
       <ProductsGrid>
         {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCardItem key={product.id} product={product} />
         ))}
       </ProductsGrid>
     </RelatedSection>
