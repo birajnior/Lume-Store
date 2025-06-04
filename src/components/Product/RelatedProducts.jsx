@@ -1,35 +1,27 @@
-import ProductCard from "../Cards/ProductCard"; // já criado por você
+import { productImages } from "../../utils/images";
+import RelatedProductsSection from "../Cards/RelatedProductsSection";
 
 const relatedProducts = [
   {
     id: 101,
-    title: "Vela Aromática Lavanda",
-    price: 49.9,
-    image: "/images/vela1.jpg",
+    name: "Vela Lavanda",
+    price: "R$ 49,90",
+    image: productImages.velaLavanda,
   },
   {
     id: 102,
-    title: "Vela de Eucalipto",
-    price: 39.9,
-    image: "/images/vela2.jpg",
+    name: "Kit Velas Lavanda e Flor de Laranjeira",
+    price: "R$ 79,90",
+    image: productImages.imgCaixa2,
   },
   {
     id: 103,
-    title: "Vela de Baunilha",
-    price: 59.9,
-    image: "/images/vela3.jpg",
+    name: "Vela Lavanda - vaso ceramica",
+    price: "R$ 59,90",
+    image: productImages.imgRosa,
   },
 ];
 
 export default function RelatedProducts() {
-  return (
-    <section>
-      <h2>Produtos Relacionados</h2>
-      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-        {relatedProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
-    </section>
-  );
+  return <RelatedProductsSection products={relatedProducts} />;
 }

@@ -1,16 +1,12 @@
 import { useState } from "react";
 import { GalleryWrapper, MainImage, Thumbnails } from "./ProductGallery.styles";
-import vela1 from "../../images/vela1.jpg";
-import vela2 from "../../images/vela2.jpg";
-import vela3 from "../../images/vela3.jpg";
-
+import { productImages } from "../../utils/images";
 
 const images = [
-  { src: vela1, alt: "Vela aromática" },
-  { src: vela2, alt: "Vela aromática" },
-  { src: vela3, alt: "Vela aromática" },
+  { src: productImages.vela1, alt: "Vela aromática" },
+  { src: productImages.vela2, alt: "Vela aromática" },
+  { src: productImages.vela3, alt: "Vela aromática" },
 ];
-
 
 export default function ProductGallery() {
   const [selectedImage, setSelectedImage] = useState(images[0]);

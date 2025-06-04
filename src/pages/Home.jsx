@@ -1,11 +1,11 @@
 import { BannerSlider } from "../components/BannerSlider/BannerSlider";
-import ProductShowCase from "../components/Cards/ProductShowCase";
+import ProductCard from "../components/Cards/ProductCard";
 
 function Home() {
   return (
     <>
       <BannerSlider />
-      <ProductShowCase />
+      <ProductCard />
     </>
   );
 }
