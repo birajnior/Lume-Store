@@ -10,6 +10,7 @@ export const theme = {
     button: "#c7a891",
     buttonHover: "#b99374",
     border: "#ccc",
+    light: "#4b2e39",
   },
   fonts: {
     body: "'Roboto', sans-serif",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CategoriasWrapper, CategoriasLink } from "./Categorias.style";
 
-export const CategoriasBar = () => {
+const CategoriasBar = () => {
   const [categoriaAtiva, setCategoriaAtiva] = useState("Início");
   const categorias = ["Início", "Novidades", "Mais Vendidos", "Promoções"];
   return (
@@ -13,9 +13,11 @@ export const CategoriasBar = () => {
           onClick={() => setCategoriaAtiva(categoria)}
           className={categoriaAtiva === categoria ? "active" : ""}
         >
-            {categoria}
+          {categoria}
         </CategoriasLink>
       ))}
     </CategoriasWrapper>
   );
 };
+
+export default CategoriasBar;
